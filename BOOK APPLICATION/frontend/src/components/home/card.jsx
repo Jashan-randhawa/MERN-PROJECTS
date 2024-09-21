@@ -33,13 +33,13 @@ const Card = ({ items, books }) => {
           className="text-2xl text-green-800 hover:text-black cursor-pointer"
           onClick={() => setshowmodal(true)}
         />
-        <Link to={`/books/details/${books._id}`}>
+        <Link to={`/books/details/${items._id}`}>
           <BsInfoCircleFill className="text-2xl text-green-800 " />
         </Link>
-        <Link to={`/books/edit/${books._id}`}>
+        <Link to={`/books/edit/${items._id}`}>
           <AiOutlineEdit className="text-2xl text-green-800 " />
         </Link>
-        <Link to={`/books/delete/${books._id}`}>
+        <Link to={`/books/delete/${items._id}`}>
           <MdOutlineDelete className="text-2xl text-green-800 " />
         </Link>
       </div>
