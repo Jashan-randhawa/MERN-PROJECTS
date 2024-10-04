@@ -1,6 +1,7 @@
 import React, { Suspense, useState } from "react";
 import {
   AppBar,
+  Backdrop,
   Box,
   IconButton,
   Toolbar,
@@ -101,19 +102,19 @@ const Header = () => {
         </Toolbar>
       </Box>
       {issearch && (
-        <Suspense fallback={<div> loading...</div>}>
+        <Suspense fallback={<Backdrop open />}>
           <Search></Search>
         </Suspense>
       )}
 
       {isnotification && (
-        <Suspense fallback={<div> loading...</div>}>
+        <Suspense fallback={<Backdrop open />}>
           <Notificationdialog></Notificationdialog>
         </Suspense>
       )}
 
       {isnewgroup && (
-        <Suspense fallback={<div> loading...</div>}>
+        <Suspense fallback={<Backdrop open />}>
           <Newgroupdialog></Newgroupdialog>
         </Suspense>
       )}
