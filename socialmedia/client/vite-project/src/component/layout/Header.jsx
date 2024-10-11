@@ -22,7 +22,7 @@ const Notificationdialog = React.lazy(() => import("../specific/Notification"));
 const Newgroupdialog = React.lazy(() => import("../dialogs/Newgroups"));
 
 const Header = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [ismobile, setismobile] = useState(false);
   const [issearch, setissearch] = useState(false);
   const [isnewgroup, setisnewgroup] = useState(false);
@@ -41,7 +41,7 @@ const Header = () => {
     setisnotification((prev) => !prev);
   };
   const navigatetogroup = () => {
-    navigate("/groups");
+    navigate("/group");
   };
   return (
     <>

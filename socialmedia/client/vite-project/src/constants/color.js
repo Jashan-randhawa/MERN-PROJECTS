@@ -1,1 +1,2 @@
-export const Orange = "#ea7070";
+const Orange = "#ea7070"
+export default Orange;

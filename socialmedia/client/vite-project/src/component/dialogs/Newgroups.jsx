@@ -1,23 +1,22 @@
-import React, { useState } from "react";
+import { useInputValidation } from "6pp";
 import {
-  Avatar,
   Button,
   Dialog,
   DialogTitle,
-  ListItem,
   Stack,
   TextField,
   Typography,
 } from "@mui/material";
+import React, { useState } from "react";
 import { sampleuser } from "../../constants/sampledata";
 import UserItem from "../shared/UserItem";
-import { useInputValidation } from "6pp";
 
 const Newgroups = () => {
   const [members, setmembers] = useState(sampleuser);
   const [selectedmembers, setselectedmembers] = useState([]);
   const groupname = useInputValidation("");
   const submithandler = () => {};
+  const closehandler = () => {};
 
   const selectmemberhandler = (id) => {
     setmembers((prev) =>
@@ -30,9 +29,8 @@ const Newgroups = () => {
       prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
     );
   };
-  console.log(selectedmembers);
   return (
-    <Dialog open>
+    <Dialog open onClose={closehandler}>
       <Stack p={{ xs: "1rem", sm: "3rem" }} width={"25rem"} spacing={"2rem"}>
         <DialogTitle textAlign={"center"} variant="h4">
           New Group
